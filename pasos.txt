@@ -1,0 +1,11 @@
+1. Diagrama de la base de datos
+2. Base de datos ejecutar script
+3. Crear en el visual un proyecto de servicio WCF
+4. Crear la clase base de datos usando linq referencia con el string de conexion de la base
+5. Crear las clases tbl en el iService
+6. definir las operaciones de servicio en iService.svc
+7. implementar las operaciones de servicio en service1.svc
+8. Crear un proyecto de Windows Forms
+9. Referenciar el servicio creado WCF
+10. IMplementar la interfaz
+11. Añadir funcionalidades de la interfaz

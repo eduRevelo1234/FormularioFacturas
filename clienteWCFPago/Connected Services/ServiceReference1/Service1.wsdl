@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54131/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54131/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54131/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfFactura1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_obtenerDetalles_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDetalles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDetalles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDetallesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerTodoDetalles_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTodoDetalles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerTodoDetalles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTodoDetallesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturas_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturasConFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturasConFecha" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturasConFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturasConFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturasConCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturasConCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerListaFacturasConCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerListaFacturasConClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_eliminarFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_eliminarFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_actualizarFacturas_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarFacturas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_actualizarFacturas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarFacturasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="obtenerDetalles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerDetalles" message="tns:IService1_obtenerDetalles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerDetallesResponse" message="tns:IService1_obtenerDetalles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTodoDetalles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerTodoDetalles" message="tns:IService1_obtenerTodoDetalles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerTodoDetallesResponse" message="tns:IService1_obtenerTodoDetalles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturas" message="tns:IService1_obtenerListaFacturas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturasResponse" message="tns:IService1_obtenerListaFacturas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturasConFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturasConFecha" message="tns:IService1_obtenerListaFacturasConFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturasConFechaResponse" message="tns:IService1_obtenerListaFacturasConFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturasConCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturasConCliente" message="tns:IService1_obtenerListaFacturasConCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerListaFacturasConClienteResponse" message="tns:IService1_obtenerListaFacturasConCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerFactura" message="tns:IService1_obtenerFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerFacturaResponse" message="tns:IService1_obtenerFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/eliminarFactura" message="tns:IService1_eliminarFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/eliminarFacturaResponse" message="tns:IService1_eliminarFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarFactura" message="tns:IService1_agregarFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarFacturaResponse" message="tns:IService1_agregarFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarDetalle" message="tns:IService1_agregarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarDetalleResponse" message="tns:IService1_agregarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarFacturas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/actualizarFacturas" message="tns:IService1_actualizarFacturas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/actualizarFacturasResponse" message="tns:IService1_actualizarFacturas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtenerDetalles">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTodoDetalles">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerTodoDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturas">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerListaFacturas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturasConFecha">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerListaFacturasConFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaFacturasConCliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerListaFacturasConCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerFactura">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarFactura">
+      <soap:operation soapAction="http://tempuri.org/IService1/eliminarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarFactura">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarDetalle">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarFacturas">
+      <soap:operation soapAction="http://tempuri.org/IService1/actualizarFacturas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:54131/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

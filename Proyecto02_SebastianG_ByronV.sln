@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfFactura1", "WcfFactura1\WcfFactura1.csproj", "{C5D9951A-E9A4-4CE4-A724-D1041A7F200F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clienteWCFPago", "clienteWCFPago\clienteWCFPago.csproj", "{26EAFABF-5959-4612-82C2-498BB47BBE7E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5D9951A-E9A4-4CE4-A724-D1041A7F200F} = {C5D9951A-E9A4-4CE4-A724-D1041A7F200F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5D9951A-E9A4-4CE4-A724-D1041A7F200F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D9951A-E9A4-4CE4-A724-D1041A7F200F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D9951A-E9A4-4CE4-A724-D1041A7F200F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D9951A-E9A4-4CE4-A724-D1041A7F200F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EAFABF-5959-4612-82C2-498BB47BBE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EAFABF-5959-4612-82C2-498BB47BBE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EAFABF-5959-4612-82C2-498BB47BBE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EAFABF-5959-4612-82C2-498BB47BBE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44CEDA13-78B5-4518-88DB-0EA423CE01E0}
+	EndGlobalSection
+EndGlobal

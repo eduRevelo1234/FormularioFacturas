@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfFactura1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfFactura1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOftbl_Detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tbl_Detalle" nillable="true" type="tns:tbl_Detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftbl_Detalle" nillable="true" type="tns:ArrayOftbl_Detalle" />
+  <xs:complexType name="tbl_Detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idDetalle" type="xs:int" />
+      <xs:element minOccurs="0" name="idFactura" type="xs:int" />
+      <xs:element minOccurs="0" name="valorT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="valorU" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tbl_Detalle" nillable="true" type="tns:tbl_Detalle" />
+  <xs:complexType name="ArrayOftbl_Factura">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tbl_Factura" nillable="true" type="tns:tbl_Factura" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftbl_Factura" nillable="true" type="tns:ArrayOftbl_Factura" />
+  <xs:complexType name="tbl_Factura">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idFactura" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroCedula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tbl_Factura" nillable="true" type="tns:tbl_Factura" />
+</xs:schema>
